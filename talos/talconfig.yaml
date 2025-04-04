@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/budimanjojo/talhelper/master/pkg/config/schemas/talconfig.json
 ---
-clusterName: kubernetes
+clusterName: main
 
 talosVersion: "${talosVersion}"
 kubernetesVersion: "${kubernetesVersion}"
@@ -20,7 +20,7 @@ cniConfig:
   name: none
 
 nodes:
-  - hostname: "k8s-1"
+  - hostname: "k8s-01"
     ipAddress: "10.1.130.11"
     installDiskSelector:
       serial: "S78GNL0X981951V"
@@ -31,7 +31,7 @@ nodes:
     networkInterfaces:
       - deviceSelector:
           hardwareAddr: "bc:24:11:87:77:55"
-        dhcp: true
+        dhcp: false
         addresses:
           - "10.1.130.11/24"
         routes:
@@ -40,7 +40,7 @@ nodes:
         mtu: 9000
         vip:
           ip: "10.1.130.20"
-  - hostname: "k8s-2"
+  - hostname: "k8s-02"
     ipAddress: "10.1.130.12"
     installDiskSelector:
       serial: "S78GNL0X500319H"
@@ -51,7 +51,7 @@ nodes:
     networkInterfaces:
       - deviceSelector:
           hardwareAddr: "bc:24:11:bf:a0:aa"
-        dhcp: true
+        dhcp: false
         addresses:
           - "10.1.130.12/24"
         routes:
@@ -60,7 +60,7 @@ nodes:
         mtu: 9000
         vip:
           ip: "10.1.130.20"
-  - hostname: "k8s-3"
+  - hostname: "k8s-03"
     ipAddress: "10.1.130.13"
     installDiskSelector:
       serial: "S78GNL0X981946A"
@@ -71,7 +71,7 @@ nodes:
     networkInterfaces:
       - deviceSelector:
           hardwareAddr: "bc:24:11:9c:19:40"
-        dhcp: true
+        dhcp: false
         addresses:
           - "10.1.130.13/24"
         routes:
