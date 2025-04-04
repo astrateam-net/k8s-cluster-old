@@ -313,6 +313,9 @@ Below is a general guide on trying to debug an issue with an resource or applica
     ```sh
     kubectl -n <namespace> get events --sort-by='.metadata.creationTimestamp'
     ```
+6. Run onepassword.env
+   ```sh
+   op run --env-file="./onepassword.env" -- ./scripts/import-external-cluster.sh
 
 Resolving problems that you have could take some tweaking of your YAML manifests in order to get things working, other times it could be a external factor like permissions on a NFS server. If you are unable to figure out your problem see the support sections below.
 
