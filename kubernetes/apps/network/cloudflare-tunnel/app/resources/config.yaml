@@ -1,10 +1,10 @@
 ---
 originRequest:
-  originServerName: "external.${SECRET_DOMAIN}"
+  originServerName: "external.astrateam.net"
 
 ingress:
-  - hostname: "${SECRET_DOMAIN}"
+  - hostname: "astrateam.net"
     service: &svc https://cilium-gateway-external.kube-system.svc.cluster.local
-  - hostname: "*.${SECRET_DOMAIN}"
+  - hostname: "*.astrateam.net"
     service: *svc
   - service: http_status:404

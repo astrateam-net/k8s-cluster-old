@@ -93,7 +93,7 @@ spec:
     sources: ["gateway-httproute", "service"]
     txtOwnerId: main
     txtPrefix: k8s.main.
-    domainFilters: ["${SECRET_DOMAIN}"]
+    domainFilters: ["astrateam.net"]
     serviceMonitor:
       enabled: true
     podAnnotations:

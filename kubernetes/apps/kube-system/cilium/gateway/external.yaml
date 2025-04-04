@@ -5,7 +5,7 @@ kind: Gateway
 metadata:
   name: external
   annotations:
-    external-dns.alpha.kubernetes.io/target: &hostname "external.${SECRET_DOMAIN}"
+    external-dns.alpha.kubernetes.io/target: &hostname "external.astrateam.net"
 spec:
   gatewayClassName: cilium
   addresses:
@@ -20,18 +20,18 @@ spec:
     - name: http
       protocol: HTTP
       port: 80
-      hostname: "*.${SECRET_DOMAIN}"
+      hostname: "*.astrateam.net"
       allowedRoutes:
         namespaces:
           from: Same
     - name: https
       protocol: HTTPS
       port: 443
-      hostname: "*.${SECRET_DOMAIN}"
+      hostname: "*.astrateam.net"
       allowedRoutes:
         namespaces:
           from: All
       tls:
         certificateRefs:
           - kind: Secret
-            name: "${SECRET_DOMAIN/./-}-tls"
+            name: "astrateam-net-tls"
