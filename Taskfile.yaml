@@ -13,8 +13,12 @@ vars:
   PRIVATE_DIR: '{{.ROOT_DIR}}/.private'
   TALOSCONFIG: '{{.ROOT_DIR}}/talos/clusterconfig/talosconfig'
 
+dotenv:
+  - '{{.ROOT_DIR}}/onepassword.env'
+
 env:
   KUBECONFIG: '{{.ROOT_DIR}}/kubeconfig'
+  MINIJINJA_CONFIG_FILE: '{{.ROOT_DIR}}/.minijinja.toml'
   SOPS_AGE_KEY_FILE: '{{.ROOT_DIR}}/age.key'
   TALOSCONFIG: '{{.TALOSCONFIG}}'
 

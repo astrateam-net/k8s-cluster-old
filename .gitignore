@@ -10,6 +10,7 @@
 # Template config files
 /cluster.yaml
 /nodes.yaml
+onepassword.env
 # Kubernetes
 kubeconfig
 talosconfig
