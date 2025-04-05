@@ -9,9 +9,14 @@ spec:
   commonMetadata:
     labels:
       app.kubernetes.io/name: *app
-  dependsOn:
-    - name: rook-ceph-cluster
-      namespace: rook-ceph
+  healthChecks:
+    - apiVersion: helm.toolkit.fluxcd.io/v2
+      kind: HelmRelease
+      name: *app
+      namespace: *namespace
+  # dependsOn:
+  #   - name: rook-ceph-cluster
+  #     namespace: rook-ceph
   interval: 1h
   path: ./kubernetes/apps/default/confluence/app
   prune: true
