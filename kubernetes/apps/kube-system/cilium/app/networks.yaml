@@ -42,7 +42,7 @@ spec:
               - will-match-and-announce-all-services
       neighbors:
         - peerAddress: 10.1.130.1/32
-          peerASN: 64513
+          peerASN: 64514
 ---
 apiVersion: v1
 kind: Service
