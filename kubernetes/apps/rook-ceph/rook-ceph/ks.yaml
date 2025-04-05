@@ -47,10 +47,10 @@ spec:
       kind: HelmRelease
       name: rook-ceph-cluster
       namespace: *namespace
-    # - apiVersion: ceph.rook.io/v1
-    #   kind: CephCluster
-    #   name: rook-ceph
-    #   namespace: *namespace
+    - apiVersion: ceph.rook.io/v1
+      kind: CephCluster
+      name: rook-ceph
+      namespace: *namespace
   # healthCheckExprs:
   #   - apiVersion: ceph.rook.io/v1
   #     kind: CephCluster
