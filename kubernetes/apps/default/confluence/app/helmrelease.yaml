@@ -54,7 +54,7 @@ spec:
       localHome:
         persistentVolumeClaim:
           create: true
-          storageClassName: ceph-block
+          storageClassName: ceph-rbd
           resources:
             requests:
               storage: 10Gi
@@ -63,14 +63,14 @@ spec:
           create: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: ceph-block
+          storageClassName: ceph-rbd
           resources:
             requests:
               storage: 30Gi
       synchronyHome:
         persistentVolumeClaim:
           create: true
-          storageClassName: ceph-block
+          storageClassName: ceph-rbd
           resources:
             requests:
               storage: 2Gi
@@ -89,5 +89,5 @@ spec:
     opensearch:
       enabled: true
       persistence:
-        storageClass: ceph-block
+        storageClass: ceph-rbd
         size: 10Gi
