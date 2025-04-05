@@ -40,6 +40,12 @@ nodes:
         mtu: 9000
         vip:
           ip: "10.1.130.20"
+      - deviceSelector:
+          hardwareAddr: bc:24:11:08:5b:09
+        addresses:
+          - 10.1.115.21/24
+        mtu: 9000
+        dhcp: false
   - hostname: "k8s-02"
     ipAddress: "10.1.130.12"
     installDiskSelector:
@@ -60,6 +66,12 @@ nodes:
         mtu: 9000
         vip:
           ip: "10.1.130.20"
+      - deviceSelector:
+          hardwareAddr: bc:24:11:23:d9:bf
+        addresses:
+          - 10.1.115.22/24
+        mtu: 9000
+        dhcp: false
   - hostname: "k8s-03"
     ipAddress: "10.1.130.13"
     installDiskSelector:
@@ -80,6 +92,12 @@ nodes:
         mtu: 9000
         vip:
           ip: "10.1.130.20"
+      - deviceSelector:
+          hardwareAddr: bc:24:11:26:63:09
+        addresses:
+          - 10.1.115.23/24
+        mtu: 9000
+        dhcp: false
 
 # Global patches
 patches:
