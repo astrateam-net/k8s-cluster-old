@@ -34,7 +34,7 @@ spec:
   values:
     csi:
       cephFSKernelMountOptions: ms_mode=prefer-crc
-      enableRbdDriver: false
+      enableRbdDriver: true
       # NOTE: Enable the driver and shapshotter if you want to use CephFS
       enableCephfsDriver: false
       enableCephfsSnapshotter: false
