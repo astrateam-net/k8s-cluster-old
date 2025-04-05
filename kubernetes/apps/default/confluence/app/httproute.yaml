@@ -12,6 +12,6 @@ spec:
       sectionName: https
   rules:
     - backendRefs:
-        - name: rook-ceph-mgr-dashboard
+        - name: confluence
           namespace: default
           port: 8090
