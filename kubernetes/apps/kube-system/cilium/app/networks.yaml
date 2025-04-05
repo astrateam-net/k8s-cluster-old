@@ -49,7 +49,7 @@ kind: Service
 metadata:
   name: kube-api
   annotations:
-    lbipam.cilium.io/ips: 172.25.135.20
+    lbipam.cilium.io/ips: 172.20.135.20
 spec:
   type: LoadBalancer
   externalTrafficPolicy: Cluster
