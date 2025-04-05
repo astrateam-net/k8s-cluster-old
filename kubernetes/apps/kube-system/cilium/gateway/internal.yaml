@@ -5,14 +5,14 @@ kind: Gateway
 metadata:
   name: internal
   annotations:
-    external-dns.alpha.kubernetes.io/target: &hostname "internal.astrateam.net"
+    external-dns.alpha.kubernetes.io/target: &hostname internal.astrateam.net
 spec:
   gatewayClassName: cilium
   addresses:
     - type: IPAddress
-      value: 10.1.130.112
+      value: 10.1.130.121
     - type: IPAddress
-      value: ::ffff:10.1.130.112
+      value: ::ffff:10.1.130.121
   infrastructure:
     annotations:
       external-dns.alpha.kubernetes.io/hostname: *hostname
@@ -34,4 +34,4 @@ spec:
       tls:
         certificateRefs:
           - kind: Secret
-            name: "astrateam-net-tls"
+            name: astrateam-net-tls
