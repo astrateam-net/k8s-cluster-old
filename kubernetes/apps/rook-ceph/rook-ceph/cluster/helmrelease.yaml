@@ -38,10 +38,10 @@ spec:
     toolbox:
       enabled: true
     cephClusterSpec:
-    external:
-      enable: true
+      external:
+        enable: true
       crashCollector:
-        disable: false
+        disable: true
       healthCheck:
         daemonHealth:
           mon:
