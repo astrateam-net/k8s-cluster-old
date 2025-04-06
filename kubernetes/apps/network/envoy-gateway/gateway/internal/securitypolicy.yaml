@@ -12,14 +12,14 @@ spec:
       - proxy-authorization
       - accept
       - cookie
-    # http:
-    #   backendRefs:
-    #     - group: ""
-    #       kind: Service
-    #       name: authelia
-    #       namespace: default
-    #       port: 80
-    #   path: /api/authz/ext-authz/
+    http:
+      backendRefs:
+        - group: ""
+          kind: Service
+          name: authelia
+          namespace: default
+          port: 80
+      path: /api/authz/ext-authz/
   targetRefs:
     - group: gateway.networking.k8s.io
       kind: Gateway
