@@ -23,7 +23,7 @@ spec:
         gateway:
           controllerName: gateway.envoyproxy.io/gatewayclass-controller
         backendTlsConfig:
-          clientCertificateRef: chestr-dev-tls
+          clientCertificateRef: astrateam-net-tls
       logging:
         level:
           default: debug
