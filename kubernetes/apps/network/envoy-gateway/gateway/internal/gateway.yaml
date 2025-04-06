@@ -8,9 +8,6 @@ metadata:
     external-dns.alpha.kubernetes.io/target: &hostname internal.astrateam.net
 spec:
   gatewayClassName: envoy
-  # addresses:
-  #   - type: IPAddress
-  #     value: 172.20.130.2
   infrastructure:
     annotations:
       external-dns.alpha.kubernetes.io/hostname: *hostname
