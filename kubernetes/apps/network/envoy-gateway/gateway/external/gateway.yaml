@@ -36,4 +36,4 @@ spec:
       tls:
         certificateRefs:
           - kind: Secret
-            name: astrateam-dev-tls
+            name: astrateam-net-tls
