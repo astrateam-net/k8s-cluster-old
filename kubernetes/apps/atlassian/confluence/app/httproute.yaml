@@ -13,5 +13,5 @@ spec:
   rules:
     - backendRefs:
         - name: confluence
-          namespace: default
+          namespace: atlassian
           port: 80
