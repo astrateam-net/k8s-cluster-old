@@ -46,7 +46,7 @@ spec:
       localASN: 64514
       peers:
         - name: "peer-64513-ipv4"
-          peerASN: 64513
+          peerASN: 64514
           peerAddress: "10.1.130.1"
           peerConfigRef:
             name: "cilium-bgp-peer-config-ipv4"
