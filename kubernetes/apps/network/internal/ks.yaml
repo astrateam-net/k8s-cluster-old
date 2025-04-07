@@ -9,9 +9,9 @@ spec:
   commonMetadata:
     labels:
       app.kubernetes.io/name: *app
-  dependsOn:
-    - name: cert-manager-tls
-      namespace: cert-manager
+  # dependsOn:
+  #   - name: cert-manager-tls
+  #     namespace: cert-manager
   interval: 1h
   path: ./kubernetes/apps/network/internal/ingress-nginx
   prune: true
