@@ -66,17 +66,22 @@ spec:
             port: *port
     serviceMonitor:
       app:
-        serviceName: echo
+        serviceName: echo-server
         endpoints:
           - port: http
-    route:
+            scheme: http
+            path: /metrics
+            interval: 1m
+            scrapeTimeout: 10s
+    ingress:
       app:
-        hostnames: ["{{ .Release.Name }}.astrateam.net"]
-        parentRefs:
-          - name: external
-            namespace: network
-            sectionName: https
-        rules:
-          - backendRefs:
-              - name: *app
-                port: *port
+        className: external
+        annotations:
+          external-dns.alpha.kubernetes.io/target: "external.astrateam.net"
+        hosts:
+          - host: "{{ .Release.Name }}.astrateam.net"
+            paths:
+              - path: /
+                service:
+                  identifier: app
+                  port: http

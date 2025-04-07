@@ -74,6 +74,16 @@ spec:
           resources:
             requests:
               storage: 2Gi
+
+    ingress:
+      create: true
+      className: "external"
+      nginx: true
+      host: wiki.astrateam.net
+      # path: "/"
+      annotations:
+        external-dns.alpha.kubernetes.io/target: "external.astrateam.net"
+
     confluence:
       useHelmReleaseNameAsContainerName: false
       readinessProbe:

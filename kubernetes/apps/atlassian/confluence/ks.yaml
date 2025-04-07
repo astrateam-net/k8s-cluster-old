@@ -17,6 +17,8 @@ spec:
   dependsOn:
     - name: rook-ceph-cluster
       namespace: rook-ceph
+    - name: external-ingress-nginx
+      namespace: network
   interval: 1h
   path: ./kubernetes/apps/atlassian/confluence/app
   prune: true
