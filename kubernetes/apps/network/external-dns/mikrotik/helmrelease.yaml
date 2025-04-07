@@ -95,7 +95,7 @@ spec:
       - --managed-record-types=CNAME
     triggerLoopOnEvent: true
     policy: sync
-    sources: ["gateway-httproute", "service"]
+    sources: ["ingress", "service"]
     txtOwnerId: main
     txtPrefix: k8s.main.
     domainFilters: ["astrateam.net"]
