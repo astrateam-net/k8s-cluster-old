@@ -43,7 +43,7 @@ l2announcements:
   enabled: false
 loadBalancer:
   algorithm: maglev
-  mode: dsr
+  mode: snat
 localRedirectPolicy: true
 # MTU: 9000
 operator:
